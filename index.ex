@@ -28,7 +28,7 @@ defmodule FirstprojectWeb.Index do
   end
 
   def handle_event("sync_with_mosque", _params, socket) do
-    {:noreply, push_navigate(socket, to: "/SYNC-WITH-MOSQUE")}
+    {:noreply, assign(socket, active_tab: "SYNC-WITH-MOSQUE")}
   end 
 
   def handle_event("standalone_device", _params, socket) do
@@ -97,21 +97,67 @@ defmodule FirstprojectWeb.Index do
       <.settings_nav active_tab={@active_tab} />
 
       <div class="p-4 md:p-6 h-[calc(100vh-5rem)] overflow-y-auto">
-        <div :if={@active_tab == "mosque"} class="space-y-8 md:space-y-10 h-[30vh] flex flex-col justify-center">
+        <div :if={@active_tab == "mosque"} class="space-y-8 md:space-y-10">
           <span class="sm:text-md md:text-lg font-serif font-bold text-gray-800 mb-4 sm:pl-11 whitespace-nowrap">Do you want to sync with your local mosque or use it as a stand alone device?</span>
-          <div class="flex justify-center items-center gap-8 mt-[14vh] mb-20">
+          <div class="flex justify-center items-center gap-8">
             <button 
               phx-click="sync_with_mosque"
-              class={"w-[200px] h-[40px] border-[1px] border-[#061131] rounded-lg transition-colors #{if @sync_with_mosque == "SYNC-WITH-MOSQUE", do: "hooho", else: ""}"}
-            >
+              class={"w-[200px] h-[40px] border-[1px] border-[#061131] rounded-lg transition-colors #{if @sync_with_mosque == "SYNC-WITH-MOSQUE", do: "hooho", else: ""}"}>
               <span class="font-serif text-md whitespace-nowrap">Sync with Mosque</span>
             </button>
             <button 
               phx-click="standalone_device"
-              class={"w-[200px] h-[42px] border bg-[#061131] rounded-lg transition-colors #{if @standalone_device == "STAND-ALONE-DEVICE", do: "haha", else: ""}"}
-            >
+              class={"w-[200px] h-[42px] border bg-[#061131] rounded-lg transition-colors #{if @standalone_device == "STAND-ALONE-DEVICE", do: "haha", else: ""}"}>
               <span class="font-serif text-md text-white whitespace-nowrap">Stand-Alone Device</span>
             </button>
+          </div>
+        </div>
+
+        <div :if={@active_tab == "SYNC-WITH-MOSQUE"} class="mt-8">
+          <div class="flex justify-between px-6">
+            <div class="w-1/2">
+              <div class="relative w-full">
+                <input 
+                  type="text" 
+                  placeholder="Enter mosque name..." 
+                  class="h-10 w-full rounded-lg border border-[#061131] pl-4 pr-10"
+                />
+                <div class="absolute right-3 top-1/2 -translate-y-1/2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="w-1/2">
+              <div class="text-[rgba(22,82,154,1)]">Your mosque: Malden Islamic Centre</div>
+            </div>
+          </div>
+
+          <div class="px-6 mt-4 text-sm">
+            Only mosques registered with Almosque.app will be displayed here. If you can't find your mosque here, please have your mosque administrator contact us at info@almosque.app for free registration.
+          </div>
+
+          <div class="px-6 mt-6">
+            <div class="font-semibold mb-4">Nearby mosques:</div>
+            <div class="space-y-4">
+              <div class="h-14  w-[20em] rounded-lg border border-[#061131] bg-[#E4D0A8] p-1">
+                <div class="text-white text-lg pl-3">Malden Islamic Centre</div>
+                <div class="text-white text-sm pl-3">405 Pearl Street</div>
+              </div>
+              <div class="h-14  w-[20em] rounded-lg border border-[#061131] bg-[#797171] p-1">
+                <div class="text-white text-lg pl-3">Islamic Cultural Center of Medford</div>
+                <div class="text-white text-sm pl-3">43 High street</div>
+              </div>
+              <div class="h-14  w-[20em] rounded-lg border border-[#061131] bg-[#797171] p-1">
+                <div class="text-white text-lg pl-3">Masjid Ahlus-Sunnah wal-Jama'ah</div>
+                <div class="text-white text-sm pl-3">41 Marble street</div>
+              </div>
+              <div class="h-14  w-[20em] rounded-lg border border-[#061131] bg-[#797171] p-1">
+                <div class="text-white text-lg pl-3">New England Islamic Center</div>
+                <div class="text-white text-sm pl-3">23 School street</div>
+              </div>
+            </div>
           </div>
         </div>
         
