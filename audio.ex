@@ -165,22 +165,7 @@ defmodule FirstprojectWeb.Audio do
               </div>
             </div>
 
-            <div class="flex flex-col bg-white rounded-lg w-[234px] min-w-[234px]">
-              <div class="relative w-[234px] min-w-[234px]">
-                <img src="https://s3-alpha-sig.figma.com/img/9f3f/c207/087e40ada70f3e0bed0f93ad0ae7f4b0?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=aK4O~aBtozxpk8I5m5iPXYthTCdawGcvenPIYS1iP6fO1uKlM8tqabstP4TN78h6XePk2ncPftTsN-ntpzxAU-bIO-DDulW7El-wTM-W69VA3722u2StIhtH1FpeS5l62uZf2zIEhC6xzKaCSLpOJCAO1pgmAHILsYYPsmPJ3tG-orH96MVMcVsTiKKqZAMA0zjEUfb6ocE9eDO5lAfxCDHo~5U5v2pv9jJ2IR1PKCfzU-WYQwNMjBFLPh3aYDHfDcJczSFYzpn7ne2y3y0RCOsCRrLis5BjFe3SR3qS8g1D1ndSupheSadsSf2qnwspPvjifkw-AqkjD58htPO6vg__"
-                  class="w-[234px] min-w-[234px]" />
-                <span class="absolute bottom-1 font-karma text-2xl left-0 right-0 text-center font-medium">
-                  <span class="text-[#9B7925]">ISLAMIC</span> <br><span class="text-black">RADIO</span>
-                </span>
-              </div>
-            </div>
-
-          <div phx-click="go_to_bedtime" class="flex flex-col bg-white  w-[234px] min-w-[234px] cursor-pointer">
-              <div class="relative w-[234px] min-w-[234px]">
-                <img src="https://s3-alpha-sig.figma.com/img/9f3f/c207/087e40ada70f3e0bed0f93ad0ae7f4b0?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=aK4O~aBtozxpk8I5m5iPXYthTCdawGcvenPIYS1iP6fO1uKlM8tqabstP4TN78h6XePk2ncPftTsN-ntpzxAU-bIO-DDulW7El-wTM-W69VA3722u2StIhtH1FpeS5l62uZf2zIEhC6xzKaCSLpOJCAO1pgmAHILsYYPsmPJ3tG-orH96MVMcVsTiKKqZAMA0zjEUfb6ocE9eDO5lAfxCDHo~5U5v2pv9jJ2IR1PKCfzU-WYQwNMjBFLPh3aYDHfDcJczSFYzpn7ne2y3y0RCOsCRrLis5BjFe3SR3qS8g1D1ndSupheSadsSf2qnwspPvjifkw-AqkjD58htPO6vg__" class="w-[234px] min-w-[234px]" />
-                <span class="absolute bottom-0 font-karma text-2xl left-0 right-0 text-center font-medium"><span class="text-[#9B7925]">BEDTIME</span> <br><span class="text-black">STORIES</span></span>
-              </div>
-            </div>
+          
 
             <div class="flex flex-col bg-white w-[234px] min-w-[234px]">
               <div class="relative w-[234px] min-w-[234px]">
